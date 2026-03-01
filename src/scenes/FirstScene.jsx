@@ -28,15 +28,14 @@ const FirstScene = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: Container.current,
+        trigger: ".FirstPage",
         start: "top top",
         end: "+=1900",
-        markers: true,
         scrub: true,
-        pin: true,
       },
     });
 
+    
     tl.to(".hands", { scale: 1, duration: 1.5, ease: "power1.inOut" });
     tl.to(
       ".word1,.word2,.word3",
@@ -48,6 +47,8 @@ const FirstScene = () => {
       },
       "<",
     );
+
+     
 
     tl.to(".word1,.word2,.word3", { opacity: 0, duration: 0 });
     tl.to(
@@ -62,6 +63,8 @@ const FirstScene = () => {
       },
       "<",
     );
+
+   
 
     // Embrace + lines appear together
     tl.to(".NewWord", { opacity: 1, duration: 0, ease: "bounce.inOut" }, "<");
@@ -85,10 +88,12 @@ const FirstScene = () => {
     );
 
     tl.to(".Que",{scale:2, duration:.5, ease:"power1.inOut"},"<.5")
-  });
+    
+    tl.to(".main", { translateY: "0%", duration: 1 },"<")
+  },[]);
 
   return (
-    <section ref={Container} className="w-full h-screen">
+    <section className= " FirstPage w-full h-screen fixed inset-0">
       <div className="w-full h-screen bg-[#0f0f10] text-white overflow-hidden center Clash-Font">
         <img
           className="hands w-full h-screen object-cover absolute inset-0 z-10"
