@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .center {
+    @apply flex justify-center items-center;
+  }
+}
+
+.Clash-Font {
+  font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    
+}
