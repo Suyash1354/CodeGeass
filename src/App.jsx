@@ -5,15 +5,17 @@ import ThirdScene from "./scenes/ThirdScene";
 
 const App = () => {
   return (
-    <main className="w-full relative">
+    <main className="w-full bg-[#0f0f10]">
       <GlobalNoise />
 
       {/* Scroll height — first 1900px drives FirstScene, ~1600-2300px is the burn transition */}
-      <div style={{ height: "6700px" }} />
+      <div style={{ height: "5700px" }} >
 
       <FirstScene />
       <SecondScene />
       <ThirdScene/>
+</div>
+      
     </main>
   );
 };

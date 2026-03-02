@@ -12,10 +12,10 @@ const SecondScene = () => {
         start: "bottom top",
         end: "+=1900",
         scrub:true,
-        markers: true,
+       
         onEnter: () => {
           gsap.set(".FirstPage", { opacity: 0 });
-          gsap.set(".main", { opacity: 1 });
+          gsap.set(".main", { opacity: 1});
         },
         onLeaveBack: () => {
           gsap.set(".FirstPage", { opacity: 1 });
@@ -30,6 +30,8 @@ const SecondScene = () => {
       tl.to( words, { opacity: 1, ease: "power1.inOut", duration: 0.5,});
       tl.to( words, { opacity: 0, ease: "power1.inOut", duration: 0.5,});
     })
+
+   
     
   }, []);
 
