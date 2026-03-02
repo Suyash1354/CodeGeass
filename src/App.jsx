@@ -1,15 +1,21 @@
-import FirstScene from './scenes/FirstScene'
-import SecondScene from './scenes/SecondScene'
+import FirstScene from "./scenes/FirstScene";
+import SecondScene from "./scenes/SecondScene";
+import GlobalNoise from "./components/GlobalNoise";
+import ThirdScene from "./scenes/ThirdScene";
 
 const App = () => {
   return (
-    <main className='w-full'>
-      {/* Height gives scroll room for FirstScene (1900px) + SecondScene */}
-      <div style={{ height: "4800px" }} />
+    <main className="w-full relative">
+      <GlobalNoise />
+
+      {/* Scroll height — first 1900px drives FirstScene, ~1600-2300px is the burn transition */}
+      <div style={{ height: "6700px" }} />
+
       <FirstScene />
       <SecondScene />
+      <ThirdScene/>
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;

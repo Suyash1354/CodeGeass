@@ -94,6 +94,7 @@ const FirstScene = () => {
 
   return (
     <section className= " FirstPage w-full h-screen fixed inset-0">
+      
       <div className="w-full h-screen bg-[#0f0f10] text-white overflow-hidden center Clash-Font">
         <img
           className="hands w-full h-screen object-cover absolute inset-0 z-10"
